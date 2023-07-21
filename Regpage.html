@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+ <html> 
+  <head> 
+    <style>
+        .background{
+                  background-image:url("bg23.jpg");
+                  opacity:1.0;
+               }
+        .genderselect{
+                                font-weight:bold;
+                                border-radius:36px;
+                                padding:8px;
+                                width:250px;
+                                background:#ECF0F1;
+                                border:2px solid #B3B6B7;
+                               } 
+          #corners{
+                          background:#F0F3F4;
+                          font-size:16px;
+                          font-weight:bold;
+                          border-radius:10px;
+                          border:2px solid #B3B6B7;
+                          padding:11px; 
+                          width:260px;
+                          height:6px;
+                         }
+         #addcorners{
+                               background:#ECF0F1;
+                               border-radius:20px;
+                               border:1.5px solid #cccccc;
+                               padding:13px; 
+                               width:350px;
+                               height:1px; 
+                             }
+          .button{
+                       background:#797D7F;
+                       font-weight:bold;
+                       border-radius:10px;
+                       color:#fff;
+                       font-size:17px;
+                       width:85px;
+                       cursor:pointer;
+                     }
+         .button1{
+                      background:#3f51b5;
+                      border-color:#3f51b5;
+                      font-weight:bold;
+                      color:#fff;
+                      border-radius:10px;
+                      padding:6px;
+                      font-size:18px;
+                      width:240px;
+                      cursor:pointer;
+                     }
+        .button2{
+                      background:#3f51b5;
+                      border-color:#3f51b5;
+                      font-weight:bold;
+                      color:#fff;
+                      border-radius:10px;
+                      padding:6px;
+                      font-size:18px;
+                      width:240px;
+                      cursor:pointer;
+                     }
+      </style> 
+      <script>
+        function validateform() 
+        {
+          var a=document.myform.name.value;
+          var num=document.myform.MOBILE.value;
+          var p1=document.myform.password1.value; 
+          var p2=document.myform.password2.value;
+          if (a == "") 
+          {
+            alert("NAME cannot be empty");
+            return false;
+           } 
+           else if(num.length!=10){
+           alert("Phone number must be 10 digits");
+           return false;
+          }
+          else if(p1.length<8){
+            alert("Password must contain atleast 8 characters");
+            return false;
+           }
+          else if(p1!=p2){
+            alert("Passwords must be same");
+            return false;
+           }
+        }     
+       </script>
+    </head>	        
+  <body align="center">
+     <div class="background"> 
+     <form name="myform" onsubmit="return validateform()">
+         <font color=#fff>
+         <br>
+         <b>NAME:</b>
+           <input id="corners" type="text" name="name" required><br><br>
+         <b>GENDER:</b>
+           <select class="genderselect">
+                   <option value="select"><b>select</b></option>
+                   <option value="Male">Male</option>
+                   <option value="Female">Female</option>
+           </select required><br><br>
+         <b>MOBILE:</b>
+           <input id="corners" type="text" name="MOBILE" required><br><br>
+         <b>EMAIL:</b>
+           <input id="corners" type="text" name="EMAIL"><br><br>
+         <b>ID PROOF:</b>
+           <select class="genderselect">
+                   <option value="select"><b>select</b></option>
+                   <option value="Aadhar card">Aadhar card</option>
+                   <option value="Pan card">Pan card</option>
+                   <option value="Passport">Passport</option>
+                   <option value="Voter ID">Voter ID</option>
+                   <option value="Driving License">Driving License</option>
+           </select required><br><br>
+         <b>PASSWORD:</b>
+           <input id ="corners" type="password" name="password1"><br><br>
+         <b>RE-ENTER PASSWORD:</b>
+           <input id="corners" type="password" name="password2"><br>
+           &nbsp
+           &nbsp
+           <br><img src="C:\Users\91630\Desktop\WT Project\google1.png"/>
+           <input class="button1" type="submit" value="Sign in with Google"/><br>
+           <img src="C:\Users\91630\Desktop\WT Project\fb1.png"/>
+           <input class="button2" type="submit" value="Sign in with Facebook"/><br><br>
+           &nbsp
+           &nbsp
+           <input class="button" type="reset" value="cancel"/>
+           &nbsp
+           &nbsp         
+           <button class="button" type="submit">sign up</button>
+     </form>
+   </div>
+   </body>
+</html>

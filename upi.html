@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title> UPI mode</title>
+<script language="javascript">
+function msg()
+{
+var a=document.myform.id.value;
+    if(a.length==0)
+    {
+        alert("UPI ID should not be empty");
+        return false;
+    }    
+}
+</script>
+<style>
+        #payment{
+                         font-weight:bold;
+                         border-radius:36px;
+                         padding:8px;
+                         width:250px;
+                         background:#ECF0F1;
+                         border:2px solid #B3B6B7;
+                        }
+          .button{
+                       background:#797D7F;
+                       font-weight:bold;
+                       border-radius:10px;
+                       color:#fff;
+                       font-size:17px;
+                       width:85px;
+                       cursor:pointer;
+                      }
+</style>
+</head>
+<body align="center" bgcolor=#EEF2E6>
+    <br>
+    <br>
+    <img src="C:\Users\91630\Desktop\WT Project\home\upi12.jpg">
+    <h1> UPI MODE </h1>
+    <form name="myform">
+    <p><b>UPI ID:
+    <input type ="text" name="id" id="payment"/></p>
+    &nbsp
+    &nbsp    
+    <input class="button" type="reset" value="cancel"/>
+    &nbsp
+    &nbsp         
+    <button class="button" type="submit" onclick="msg()"/>sign up</button>
+</form>
+</body>
+</html>
